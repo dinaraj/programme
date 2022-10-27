@@ -3,6 +3,16 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2K9CBNSL77"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2K9CBNSL77');
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -16,9 +26,14 @@
       line-height: 1.2;
     }
     p { margin-bottom: 0.30rem; }
+
+    body.dark-mode {
+      background-color: #222;
+    }
+    body.dark-mode p, body.dark-mode span { color: #fff !important; }
     </style>
   </head>
-  <body>
+  <body class="dark-mode">
   <div class="container mt-4">
 
     {% block content %}
