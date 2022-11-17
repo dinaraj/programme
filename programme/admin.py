@@ -6,6 +6,7 @@ from .models import Programme
 class ProgrammeAdmin(admin.ModelAdmin):
     list_display = [
         'date',
+        'nb_views',
     ]
 
 
