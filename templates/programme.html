@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
+{% block font_family %}
+  body {
+    font-family: {{ programme.font_family }}, Serif;
+  }
+{% endblock %}
+
 {% block content %}
   {{ programme.content|safe }}
-
 {% endblock %}

@@ -20,18 +20,23 @@
 
     <style>
       html, body { overflow-x: hidden; }
+      body {
+        line-height: 1.2;
+      }
+      p { margin-bottom: 0.30rem; }
 
-    body {
-      font-family: "Times New Roman", Serif, Arial;
-      line-height: 1.2;
-    }
-    p { margin-bottom: 0.30rem; }
+      body.dark-mode {
+        background-color: #222;
+      }
+      body.dark-mode p, body.dark-mode span { color: #fff !important; }
 
-    body.dark-mode {
-      background-color: #222;
-    }
-    body.dark-mode p, body.dark-mode span { color: #fff !important; }
+      {% block font_family %}
+      body {
+        font-family: "Times New Roman", Serif, Arial;
+      }
+      {% endblock %}
     </style>
+
   </head>
   <body>
   <div class="container mt-4">
