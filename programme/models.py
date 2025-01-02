@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
     image = models.ImageField(upload_to='/lieux')
 """
 
+
 class Programme(models.Model):
 
     FONT_CHOICES = [
@@ -17,7 +18,7 @@ class Programme(models.Model):
     content = RichTextField()
     nb_views = models.PositiveIntegerField(default=0)
     # lieu = models.ForeignKey(Lieu, on_delete=models.SET_NULL, null=True)
-    font_family = models.CharField(max_length=50, choices=FONT_CHOICES, default='Times New Roman')
+    font_family = models.CharField(max_length=50, choices=FONT_CHOICES, default='Arial')
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
