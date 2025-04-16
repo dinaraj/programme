@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 from ckeditor.fields import RichTextField
 
 
@@ -27,3 +29,6 @@ class Programme(models.Model):
 
     class Meta:
         ordering = ['-created_at']
+
+    def get_absolute_url(self):
+        return reverse('index', kwargs={'date': self.date})

@@ -7,5 +7,5 @@ from programme import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('date/<str:date>', views.index, name='index'),
+    path('d/<str:date>', views.index, name='index'),
 ]
