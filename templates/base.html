@@ -15,7 +15,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fandaharana FPMA La Réunion</title>
+    <title>{% block head_title %}{% if pagetitle %}{{ pagetitle }}{% else %}Fandaharana FPMA La Réunion{% endif %}{% endblock %}</title>
+
     <link href="{% static 'libs/bootstrap-5.2.2/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <style>
