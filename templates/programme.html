@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block head_title %}
+	Programme du {{ programme.date|date:"d F Y" }}
+{% endblock %}
+
 {% block font_family %}
   body {
     font-family: {{ programme.font_family }}, Serif;

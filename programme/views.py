@@ -21,7 +21,6 @@ def index(request, date=None):
         programme.nb_views += 1
         programme.save()
         context = {
-            'pagetitle': f"Programme du {programme.date.strftime('%d %B %Y')}",
             'programme': programme
         }
         return render(request, 'programme.html', context)
