@@ -32,6 +32,26 @@
       }
       body.dark-mode p, body.dark-mode span { color: #fff !important; }
 
+      .admin-link {
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+        font-family: Arial, sans-serif;
+        text-decoration: none;
+        color: #888;
+      }
+      .admin-link--edit {
+        font-size: 0.8rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.8);
+        opacity: 0.6;
+      }
+      .admin-link--edit:hover { opacity: 1; }
+      @media print {
+        .admin-link { display: none; }
+      }
+
       {% block font_family %}
       body {
         font-family: "Times New Roman", Serif, Arial;

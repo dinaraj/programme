@@ -12,4 +12,8 @@
 
 {% block content %}
   {{ programme.content|safe }}
+
+  {% if user.is_superuser %}
+    <a href="{% url 'admin:programme_programme_change' programme.pk %}" class="admin-link admin-link--edit" title="Modifier ce programme">✎ Modifier</a>
+  {% endif %}
 {% endblock %}
